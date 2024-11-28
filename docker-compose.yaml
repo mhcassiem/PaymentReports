@@ -1,0 +1,31 @@
+version: "3.9"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - .:/output_folder
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+      - FILE_PATH=2024_09_10_payments.csv
+      - OUTPUT_PATH=output_folder
+    command: poetry run python main.py
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - .:/output_folder
+    environment:
+      - PYTHONDONTWRITEBYTECODE=1
+      - PYTHONUNBUFFERED=1
+    command: poetry run python -m unittest tests.payments

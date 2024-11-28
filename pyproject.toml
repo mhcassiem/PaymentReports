@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "paymentsreports"
+version = "0.1.0"
+description = ""
+authors = ["mhcassiem <mhcassiem@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pandas = "^2.2.3"
+black = "^24.10.0"
+faker = "^33.0.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
