@@ -1,5 +1,5 @@
 # Project overview
-Since th use case was so narrow I decided to implement the task using pure Python.
+Since the use case was so narrow I decided to implement the task using pure Python.
 Ideally this would form part of a large web application or something similar, instead of running in the command line
 and expecting user input from there.
 
